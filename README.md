@@ -1,2 +1,35 @@
-# VanillaAmoledRoundedObsidianTheme
-Custom fork of the Vanilla Amoled theme with improved readability and usability
+# Vanilla Amoled Rounded Obsidian Theme
+
+Кастомный форк темы Vanilla Amoled с улучшенной читаемостью и удобством использования.
+
+## Основные особенности
+
+* **Шрифт Onest**: Максимальная читаемость и комфорт для глаз.
+* **Полная ширина**: Изображения, холсты, канвасы и другие элементы автоматически растягиваются на всю ширину заметки.
+* **Поддержка баннеров**: Опциональная интеграция с плагином Pixel Banner для удобного использования баннеров в заметках.
+* **Улучшенные стили заголовков**: Заголовки стали еще более читаемыми и визуально приятными.
+* **Исправленные стили таблиц**: Полная совместимость с плагином Advanced Tables. Таблицы теперь имеют закруглённые углы и горизонтальную прокрутку при превышении ширины заметки.
+
+## Как установить
+
+1. Скачайте и поместите папку темы в `.obsidian/themes` вашего хранилища.
+2. Перезапустите Obsidian.
+3. Выберите тему `Vanilla Amoled Rounded` в настройках Obsidian и наслаждайтесь удобной и стильной работой.
+
+## Screenshots
+
+![img.png](ReadmeSources/img.png)
+
+![img.png](ReadmeSources/img.png)
+
+![img_1.png](ReadmeSources/img_1.png)
+
+![img_2.png](ReadmeSources/img_2.png)
+
+![img_3.png](ReadmeSources/img_3.png)
+
+![img_4.png](ReadmeSources/img_4.png)
+
+![img_5.png](ReadmeSources/img_5.png)
+
+![img_6.png](ReadmeSources/img_6.png)
