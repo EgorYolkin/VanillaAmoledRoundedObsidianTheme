@@ -408,13 +408,13 @@
 .view-header-title,
 .view-header-title[contenteditable="true"],
 .inline-title {
-  font-size: 2.2em !important;
-  font-weight: bolder !important;
-  line-height: 1.5 !important;
-  display: flex !important;
-  margin-top: 1em !important;
-  margin-bottom: 1em !important;
-  color: var(--color-base-100) !important;
+	font-size: 2.2em !important;
+	font-weight: bolder !important;
+	line-height: 1.5 !important;
+	display: flex !important;
+	margin-top: 1em !important;
+	margin-bottom: 1em !important;
+	color: var(--color-base-100) !important;
 }
 
 /* Область редактора */
@@ -479,6 +479,28 @@
 	cursor: pointer !important;
 }
 
-/*
-	Based on Vanilla AMOLED by Sakura Akeno Isayeki
-	Modified with custom properties, headers, table styles, image scaling, scroll for tables, and optimizations */
+/* Lists */
+body{
+	--list-marker-color: transparent;
+	--list-marker-color-hover: transparent;
+	--list-marker-color-collapsed: transparent;
+}
+
+.markdown-source-view.mod-cm6 .list-bullet::before{
+	content:"+";
+	position: absolute; left:-0.3em; top:0.3em;
+	font-weight: 500;
+	line-height:1;
+	color: var(--color-base-50);
+}
+
+ul > li:not(.task-list-item){
+	position: relative;
+	padding-left: -1.3em;
+}
+ul > li:not(.task-list-item)::before{
+	content: "+";
+	position: absolute; left:-1.3em; top:0.3em;
+	font-weight: 500; line-height:1;
+	color: var(--color-base-50)
+}
