@@ -1,5 +1,7 @@
 # Vanilla Amoled Rounded Obsidian Theme
 
+![Obsidian Version](https://img.shields.io/badge/Obsidian-1.5.12-blueviolet.svg?style=for-the-badge\&logo=obsidian)
+
 Кастомный форк темы Vanilla Amoled с улучшенной читаемостью и удобством использования.
 
 ## Основные особенности
