@@ -1,0 +1,9 @@
+{
+  "name": "VanillaAmoledModified",
+  "version": "1.0.0",
+  "minAppVersion": "0.16.0",
+  "description": "Custom fork of the Vanilla Amoled theme with improved readability and usability",
+  "author": "Egor Yolkin",
+  "authorUrl": "https://github.com/EgorYolkin",
+  "isDesktopOnly": false
+}

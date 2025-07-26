@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
+.markdown-preview-view,
+.markdown-source-view.mod-cm6 .cm-content {
+	font-family: 'Onest', sans-serif !important;
+}
+
+/* Модифицированная тема на основе Vanilla AMOLED */
+
+.theme-dark {
+	--color-base-00: #000;
+	--color-base-05: #080808;
+	--color-base-10: #111;
+	--color-base-20: #1a1a1a;
+	--color-base-25: #222;
+	--color-base-30: #333;
+	--color-base-35: #363636;
+	--color-base-40: #4a4a4a;
+	--color-base-50: #666;
+	--color-base-60: #999;
+	--color-base-70: #bbb;
+	--color-base-100: #fff;
+
+	--background-primary: var(--color-base-00);
+	--background-secondary: var(--color-base-05);
+	--titlebar-background: var(--color-base-00);
+	--titlebar-background-focused: var(--color-base-10);
+}
+
+/* ===== СВОЙСТВА ЗАМЕТКИ (PROPERTIES) ===== */
+.metadata-container {
+	border: 1px solid var(--color-base-30) !important;
+	border-radius: 20px !important;
+	opacity: 0.9;
+	padding: 12px !important;
+	margin-top: 50px;
+	margin-bottom: 50px !important;
+	background-color: var(--color-base-05) !important;
+}
+
+.metadata-property {
+	border-radius: 0px !important;
+	border-bottom: 1px solid var(--color-base-30) !important;
+	padding: 4px 0 !important;
+}
+
+.metadata-property:hover {
+	border-radius: 10px !important;
+	transition: 500ms;
+}
+
+.metadata-property:last-child {
+	border-bottom: none !important;
+}
+
+.metadata-property-key {
+	color: var(--color-base-60) !important;
+	font-weight: 500 !important;
+}
+
+.metadata-property-value {
+	color: var(--color-base-100) !important;
+}
+
+/* ===== ЗАГОЛОВКИ ===== */
+.cm-header-1,
+.markdown-preview-view h1 {
+	font-size: 2.2em !important;
+	font-weight: bolder !important;
+	line-height: 1.5 !important;
+	border-left: 6px solid var(--color-base-70);
+	padding-left: 15px;
+	display: flex !important;
+	margin-top: 1em !important;
+	margin-bottom: 1em !important;
+	color: var(--color-base-100) !important;
+}
+
+.cm-header-2,
+.markdown-preview-view h2 {
+	font-size: 1.8em !important;
+	font-weight: 600 !important;
+	line-height: 1 !important;
+	/* margin-top: 1.5em !important; */
+	/* margin-bottom: 0.5em !important; */
+	color: var(--color-base-100) !important;
+}
+
+.cm-header-3,
+.markdown-preview-view h3 {
+	font-size: 1.5em !important;
+	font-weight: 500 !important;
+	line-height: 1 !important;
+	/* margin-top: 1.5em !important; */
+	/* margin-bottom: 0.5em !important; */
+	color: var(--color-base-100) !important;
+}
+
+.cm-header-4,
+.markdown-preview-view h4 {
+	font-size: 1.3em !important;
+	font-weight: 500 !important;
+	line-height: 1 !important;
+	/* margin-top: 1.5em !important; */
+	/* margin-bottom: 0.5em !important; */
+	color: var(--color-base-70) !important;
+}
+
+.cm-header-5,
+.markdown-preview-view h5 {
+	font-size: 1.1em !important;
+	font-weight: 500 !important;
+	line-height: 1 !important;
+	/* margin-top: 1.5em !important; */
+	/* margin-bottom: 0.5em !important; */
+	color: var(--color-base-70) !important;
+}
+
+.cm-header-6,
+.markdown-preview-view h6 {
+	font-size: 0.9em !important;
+	font-weight: 500 !important;
+	line-height: 0 !important;
+	/* margin-top: 1.5em !important; */
+	margin-bottom: -0.1em !important;
+	color: var(--color-base-60) !important;
+	text-transform: uppercase !important;
+	letter-spacing: 0.5px !important;
+}
+
+/* ===== ТАБЛИЦЫ (ADVANCED TABLES) ===== */
+.markdown-preview-view table {
+	border-collapse: separate !important;
+	border-spacing: 0 !important;
+	border-radius: 8px !important;
+	overflow: hidden !important;
+	border: 1px solid var(--color-base-30) !important;
+	background-color: var(--color-base-05) !important;
+	margin: 1em 0 !important;
+	max-width: 100% !important; /* Для предотвращения выхода за экран */
+	overflow-x: auto !important; /* Горизонтальный скролл для широких таблиц */
+	display: block !important; /* Чтобы скролл работал на table */
+}
+
+.markdown-preview-view table thead {
+	background-color: var(--color-base-10) !important;
+}
+
+.markdown-preview-view table th {
+	padding: 12px 16px !important;
+	border-bottom: 1px solid var(--color-base-30) !important;
+	border-right: 1px solid var(--color-base-30) !important;
+	font-weight: 600 !important;
+	color: var(--color-base-100) !important;
+}
+
+.markdown-preview-view table th:last-child {
+	border-right: none !important;
+}
+
+.markdown-preview-view table td {
+	padding: 10px 16px !important;
+	border-bottom: 1px solid var(--color-base-20) !important;
+	border-right: 1px solid var(--color-base-20) !important;
+	color: var(--color-base-100) !important;
+}
+
+.markdown-preview-view table td:last-child {
+	border-right: none !important;
+}
+
+.markdown-preview-view table tbody tr:last-child td {
+	border-bottom: none !important;
+}
+
+.markdown-preview-view table tbody tr:hover {
+	background-color: var(--color-base-10) !important;
+}
+
+/* ===== СТИЛИ ДЛЯ ПЛАГИНА ADVANCED TABLES ===== */
+/* Стили для редактора таблиц */
+.cm-table-widget {
+	border-radius: 8px !important;
+	overflow: hidden !important;
+	border: 1px solid var(--color-base-30) !important;
+	max-width: 100% !important; /* Для предотвращения выхода за экран */
+	overflow-x: auto !important; /* Горизонтальный скролл для широких таблиц */
+	display: block !important; /* Чтобы скролл работал */
+}
+
+.cm-table-widget table {
+	border-radius: 8px !important;
+	background-color: var(--color-base-05) !important;
+	max-width: 100% !important;
+	overflow-x: auto !important;
+}
+
+.cm-table-widget th {
+	background-color: var(--color-base-10) !important;
+	border-color: var(--color-base-30) !important;
+}
+
+.cm-table-widget td {
+	border-color: var(--color-base-20) !important;
+}
+
+/* Дополнительные стили для Advanced Tables */
+.table-editor-table {
+	border-radius: 15px !important;
+	overflow: hidden !important;
+	border: 1px solid var(--color-base-30) !important;
+	max-width: 100% !important;
+	overflow-x: auto !important;
+	display: block !important;
+}
+
+.table-editor-table th {
+	background-color: var(--color-base-10) !important;
+	border-color: var(--color-base-30) !important;
+}
+
+.table-editor-table td {
+	border-color: var(--color-base-20) !important;
+}
+
+/* Стили для режима источника */
+.cm-s-obsidian .cm-table-widget {
+	border-radius: 15px !important;
+	border: 1px solid var(--color-base-30) !important;
+	max-width: 100% !important;
+	overflow-x: auto !important;
+	display: block !important;
+}
+
+.cm-s-obsidian .cm-table-widget .cm-table-widget-table {
+	border-radius: 15px !important;
+}
+
+/* Стили для таблиц в режиме чтения */
+.markdown-reading-view table {
+	border-radius: 15px !important;
+	border: 1px solid var(--color-base-30) !important;
+	background-color: var(--color-base-05) !important;
+	max-width: 100% !important;
+	overflow-x: auto !important;
+	display: block !important;
+}
+
+.markdown-reading-view table thead {
+	background-color: var(--color-base-10) !important;
+}
+
+.markdown-reading-view table th {
+	border-color: var(--color-base-30) !important;
+}
+
+.markdown-reading-view table td {
+	border-color: var(--color-base-20) !important;
+}
+
+/* Стили для режима Live Preview */
+.cm-table-widget .cm-table-widget-table {
+	border-radius: 15px !important;
+	max-width: 100% !important;
+	overflow-x: auto !important;
+}
+
+.cm-table-widget .cm-table-widget-table th {
+	background-color: var(--color-base-10) !important;
+}
+
+.cm-table-widget .cm-table-widget-table tbody tr:hover {
+	background-color: var(--color-base-10) !important;
+}
+
+/* ===== ИЗОБРАЖЕНИЯ ===== */
+/* Изображения растягиваются на всю доступную ширину контейнера заметки */
+.markdown-preview-view img,
+.markdown-rendered img {
+	width: 100% !important; /* Растягивает на всю ширину доступной площади */
+	height: auto !important; /* Сохраняет пропорции */
+	display: block !important; /* Убирает лишние отступы */
+	margin: 1em auto !important; /* Центрирование и отступы */
+	max-width: none !important; /* Отменяет дефолтные ограничения */
+}
+
+/* Для встроенных изображений в редакторе */
+.cm-s-obsidian .cm-inline-image,
+.cm-s-obsidian img {
+	width: 100% !important;
+	height: auto !important;
+	display: block !important;
+	margin: 1em auto !important;
+}
+
+/* ===== ТАБЫ (SAFARI STYLE) ===== */
+.workspace-tab-header-container {
+	/* padding: 8px 8px 0 8px !important; */
+	margin: 5px;
+	background-color: var(--color-base-00) !important;
+	border-bottom: none !important;
+	cursor: pointer;
+}
+
+.workspace-tab-header {
+	background-color: var(--color-base-10) !important;
+	border-radius: 10px !important;
+	margin: 2px !important;
+	padding: 0 !important;
+	border: none !important;
+	position: relative !important;
+	overflow: hidden !important;
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+}
+
+.workspace-tab-header.is-active {
+	/* background-color: var(--color-base-05) !important; */
+	/* z-index: 10 !important; */
+	border: 1px solid var(--interactive-accent) !important;
+	font-weight: 700 !important;
+}
+
+.workspace-tab-header:not(.is-active) {
+	/* background-color: var(--color-base-20) !important; */
+	/* margin-top: 4px !important; */
+	border: 1px solid var(--color-base-30) !important;
+	font-weight: 200 !important;
+}
+
+.workspace-tab-header-inner {
+	padding: 8px 16px !important;
+	border-radius: 12px 12px 0 0 !important;
+	background-color: transparent !important;
+	border: none !important;
+	position: relative !important;
+}
+
+.workspace-tab-header-inner-title {
+	color: var(--color-base-100) !important;
+	font-weight: 500 !important;
+	font-size: 13px !important;
+}
+
+.workspace-tab-header:not(.is-active) .workspace-tab-header-inner-title {
+	color: var(--color-base-70) !important;
+}
+
+/* Кнопка закрытия таба */
+.workspace-tab-header-inner-close-button {
+	background-color: transparent !important;
+	border: none !important;
+	border-radius: 50% !important;
+	padding: 2px !important;
+	margin-left: 8px !important;
+	opacity: 0.7 !important;
+	transition: opacity 0.2s ease !important;
+}
+
+.workspace-tab-header-inner-close-button:hover {
+	opacity: 1 !important;
+	background-color: var(--color-base-30) !important;
+}
+
+/* .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-close-button {
+	opacity: 0.5 !important;
+} */
+
+/* Эффект соединения с контентом для активного таба */
+/* .workspace-tab-header.is-active::after {
+	content: '' !important;
+	position: absolute !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	right: 0 !important;
+	height: 1px !important;
+	background-color: var(--color-base-05) !important;
+	z-index: 11 !important;
+} */
+
+/* Контейнер контента */
+/* .workspace-tab-container {
+	background-color: var(--color-base-05) !important;
+	border-radius: 0 0 12px 12px !important;
+	margin: 0 8px !important;
+	padding: 0 !important;
+	border-top: 1px solid var(--color-base-20) !important;
+} */
+
+/* Содержимое таба */
+/* .workspace-leaf-content {
+	background-color: var(--color-base-05) !important;
+	border-radius: 0 0 12px 12px !important;
+	margin: 0 !important;
+	max-width: 80vw;
+} */
+
+/* Заголовок вкладки */
+/* .view-header {
+	background-color: var(--color-base-05) !important;
+	border-bottom: 1px solid var(--color-base-20) !important;
+	border-radius: 0 !important;
+	padding: 12px 20px !important;
+} */
+
+/* Title in header, both normal and while editing */
+.view-header-title,
+.view-header-title[contenteditable="true"],
+.inline-title {
+  font-size: 2.2em !important;
+  font-weight: bolder !important;
+  line-height: 1.5 !important;
+  display: flex !important;
+  margin-top: 1em !important;
+  margin-bottom: 1em !important;
+  color: var(--color-base-100) !important;
+}
+
+/* Область редактора */
+/* .workspace-leaf-content .view-content {
+	background-color: var(--color-base-00) !important;
+	padding: 20px !important;
+	border-radius: 0 0 12px 12px !important;
+} */
+
+/* Hover эффекты */
+.workspace-tab-header:not(.is-active):hover {
+	background-color: var(--color-base-25) !important;
+}
+
+.workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-title {
+	color: var(--color-base-100) !important;
+}
+
+/* Плавные переходы */
+.workspace-tab-header {
+	transition: background-color 0.2s ease, margin-top 0.2s ease !important;
+}
+
+.workspace-tab-header-inner-title {
+	transition: color 0.2s ease !important;
+}
+
+/* ===== ОПТИМИЗАЦИИ (ДОПОЛНИТЕЛЬНЫЕ УЛУЧШЕНИЯ ДЛЯ ПРОИЗВОДИТЕЛЬНОСТИ И ЧИТАЕМОСТИ) ===== */
+/* Эти стили добавлены отдельно для минимализма и фокуса на продуктивности:
+   - Уменьшение !important где возможно, но сохранение для переопределения дефолтов Obsidian.
+   - Добавление box-shadow для таблиц и свойств для лучшей визуальной иерархии (мягкий, не перегружает AMOLED).
+   - Увеличение базового шрифта для читаемости (особенно для 10-летних: текст крупнее, как в детских книгах).
+   - Оптимизация переходов: короче, чтобы не тормозить на слабых устройствах.
+   - Удаление дублирующихся селекторов в таблицах для скорости загрузки.
+   - Добавление cursor: pointer на hover-элементы для интерактивности. */
+
+/* Мягкий тень для контейнеров (лучшая фокус на контенте без отвлечений) */
+.metadata-container,
+.markdown-preview-view table,
+.cm-table-widget,
+.table-editor-table {
+	box-shadow: 0px 0px 20px rgba(50, 50, 50, 0.1) !important; /* Минимальная тень для глубины */
+}
+
+/* Увеличение базового размера шрифта для всего контента (для лучшей читаемости у ребёнка) */
+
+
+/* Короткие переходы для hover (оптимизация производительности) */
+.metadata-property:hover,
+.markdown-preview-view table tbody tr:hover,
+.cm-table-widget .cm-table-widget-table tbody tr:hover,
+.workspace-tab-header-inner-close-button:hover,
+.workspace-tab-header:not(.is-active):hover {
+	transition: all 0.2s ease !important; /* Коротче, чем 500ms, для скорости */
+}
+
+/* Курсор на интерактивных элементах */
+.metadata-property:hover,
+.markdown-preview-view table tbody tr:hover,
+.workspace-tab-header:hover,
+.workspace-tab-header-inner-close-button:hover {
+	cursor: pointer !important;
+}
+
+/*
+	Based on Vanilla AMOLED by Sakura Akeno Isayeki
+	Modified with custom properties, headers, table styles, image scaling, scroll for tables, and optimizations */
