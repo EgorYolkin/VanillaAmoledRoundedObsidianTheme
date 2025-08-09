@@ -363,49 +363,9 @@
 	background-color: var(--color-base-30) !important;
 }
 
-/* .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-close-button {
-	opacity: 0.5 !important;
-} */
-
-/* Эффект соединения с контентом для активного таба */
-/* .workspace-tab-header.is-active::after {
-	content: '' !important;
-	position: absolute !important;
-	bottom: 0 !important;
-	left: 0 !important;
-	right: 0 !important;
-	height: 1px !important;
-	background-color: var(--color-base-05) !important;
-	z-index: 11 !important;
-} */
-
-/* Контейнер контента */
-/* .workspace-tab-container {
-	background-color: var(--color-base-05) !important;
-	border-radius: 0 0 12px 12px !important;
-	margin: 0 8px !important;
-	padding: 0 !important;
-	border-top: 1px solid var(--color-base-20) !important;
-} */
-
-/* Содержимое таба */
-/* .workspace-leaf-content {
-	background-color: var(--color-base-05) !important;
-	border-radius: 0 0 12px 12px !important;
-	margin: 0 !important;
-	max-width: 80vw;
-} */
-
-/* Заголовок вкладки */
-/* .view-header {
-	background-color: var(--color-base-05) !important;
-	border-bottom: 1px solid var(--color-base-20) !important;
-	border-radius: 0 !important;
-	padding: 12px 20px !important;
-} */
-
+/* УДАЛЕНО: Стили для заголовка в хедере */
 /* Title in header, both normal and while editing */
-.view-header-title,
+/* .view-header-title,
 .view-header-title[contenteditable="true"],
 .inline-title {
 	font-size: 2.2em !important;
@@ -415,13 +375,6 @@
 	margin-top: 1em !important;
 	margin-bottom: 1em !important;
 	color: var(--color-base-100) !important;
-}
-
-/* Область редактора */
-/* .workspace-leaf-content .view-content {
-	background-color: var(--color-base-00) !important;
-	padding: 20px !important;
-	border-radius: 0 0 12px 12px !important;
 } */
 
 /* Hover эффекты */
@@ -460,7 +413,6 @@
 }
 
 /* Увеличение базового размера шрифта для всего контента (для лучшей читаемости у ребёнка) */
-
 
 /* Короткие переходы для hover (оптимизация производительности) */
 .metadata-property:hover,
