@@ -128,7 +128,7 @@
 	letter-spacing: 0.5px !important;
 }
 
-/* ===== ТАБЛИЦЫ (ADVANCED TABLES) ===== */
+/* ===== ТАБЛИЦЫ (ADVANCED TABLES) - УЛУЧШЕННАЯ ВЕРСИЯ ===== */
 .markdown-preview-view table {
 	border-collapse: separate !important;
 	border-spacing: 0 !important;
@@ -137,9 +137,9 @@
 	border: 1px solid var(--color-base-30) !important;
 	background-color: var(--color-base-05) !important;
 	margin: 1em 0 !important;
-	max-width: 100% !important; /* Для предотвращения выхода за экран */
-	overflow-x: auto !important; /* Горизонтальный скролл для широких таблиц */
-	display: block !important; /* Чтобы скролл работал на table */
+	width: 100% !important; /* Растягивает таблицу на всю ширину */
+	table-layout: fixed !important; /* Фиксированная разметка для равномерного распределения колонок */
+	display: table !important; /* Возвращаем обычное поведение table вместо block */
 }
 
 .markdown-preview-view table thead {
@@ -152,6 +152,10 @@
 	border-right: 1px solid var(--color-base-30) !important;
 	font-weight: 600 !important;
 	color: var(--color-base-100) !important;
+	width: auto !important; /* Автоматическое распределение ширины колонок */
+	text-align: left !important;
+	word-wrap: break-word !important; /* Переносит длинные слова */
+	overflow-wrap: break-word !important;
 }
 
 .markdown-preview-view table th:last-child {
@@ -163,6 +167,11 @@
 	border-bottom: 1px solid var(--color-base-20) !important;
 	border-right: 1px solid var(--color-base-20) !important;
 	color: var(--color-base-100) !important;
+	width: auto !important; /* Автоматическое распределение ширины колонок */
+	text-align: left !important;
+	word-wrap: break-word !important; /* Переносит длинные слова */
+	overflow-wrap: break-word !important;
+	vertical-align: top !important; /* Выравнивание содержимого по верхнему краю */
 }
 
 .markdown-preview-view table td:last-child {
@@ -177,31 +186,43 @@
 	background-color: var(--color-base-10) !important;
 }
 
+/* Контейнер для таблиц с горизонтальной прокруткой только при необходимости */
+.markdown-preview-view .table-wrapper {
+	overflow-x: auto !important;
+	margin: 1em 0 !important;
+}
+
 /* ===== СТИЛИ ДЛЯ ПЛАГИНА ADVANCED TABLES ===== */
 /* Стили для редактора таблиц */
 .cm-table-widget {
 	border-radius: 8px !important;
 	overflow: hidden !important;
 	border: 1px solid var(--color-base-30) !important;
-	max-width: 100% !important; /* Для предотвращения выхода за экран */
-	overflow-x: auto !important; /* Горизонтальный скролл для широких таблиц */
-	display: block !important; /* Чтобы скролл работал */
+	width: 100% !important;
+	display: table !important;
 }
 
 .cm-table-widget table {
 	border-radius: 8px !important;
 	background-color: var(--color-base-05) !important;
-	max-width: 100% !important;
-	overflow-x: auto !important;
+	width: 100% !important;
+	table-layout: fixed !important;
 }
 
 .cm-table-widget th {
 	background-color: var(--color-base-10) !important;
 	border-color: var(--color-base-30) !important;
+	width: auto !important;
+	word-wrap: break-word !important;
+	overflow-wrap: break-word !important;
 }
 
 .cm-table-widget td {
 	border-color: var(--color-base-20) !important;
+	width: auto !important;
+	word-wrap: break-word !important;
+	overflow-wrap: break-word !important;
+	vertical-align: top !important;
 }
 
 /* Дополнительные стили для Advanced Tables */
@@ -209,31 +230,39 @@
 	border-radius: 15px !important;
 	overflow: hidden !important;
 	border: 1px solid var(--color-base-30) !important;
-	max-width: 100% !important;
-	overflow-x: auto !important;
-	display: block !important;
+	width: 100% !important;
+	table-layout: fixed !important;
+	display: table !important;
 }
 
 .table-editor-table th {
 	background-color: var(--color-base-10) !important;
 	border-color: var(--color-base-30) !important;
+	width: auto !important;
+	word-wrap: break-word !important;
+	overflow-wrap: break-word !important;
 }
 
 .table-editor-table td {
 	border-color: var(--color-base-20) !important;
+	width: auto !important;
+	word-wrap: break-word !important;
+	overflow-wrap: break-word !important;
+	vertical-align: top !important;
 }
 
 /* Стили для режима источника */
 .cm-s-obsidian .cm-table-widget {
 	border-radius: 15px !important;
 	border: 1px solid var(--color-base-30) !important;
-	max-width: 100% !important;
-	overflow-x: auto !important;
-	display: block !important;
+	width: 100% !important;
+	display: table !important;
 }
 
 .cm-s-obsidian .cm-table-widget .cm-table-widget-table {
 	border-radius: 15px !important;
+	width: 100% !important;
+	table-layout: fixed !important;
 }
 
 /* Стили для таблиц в режиме чтения */
@@ -241,9 +270,9 @@
 	border-radius: 15px !important;
 	border: 1px solid var(--color-base-30) !important;
 	background-color: var(--color-base-05) !important;
-	max-width: 100% !important;
-	overflow-x: auto !important;
-	display: block !important;
+	width: 100% !important;
+	table-layout: fixed !important;
+	display: table !important;
 }
 
 .markdown-reading-view table thead {
@@ -252,25 +281,59 @@
 
 .markdown-reading-view table th {
 	border-color: var(--color-base-30) !important;
+	width: auto !important;
+	word-wrap: break-word !important;
+	overflow-wrap: break-word !important;
 }
 
 .markdown-reading-view table td {
 	border-color: var(--color-base-20) !important;
+	width: auto !important;
+	word-wrap: break-word !important;
+	overflow-wrap: break-word !important;
+	vertical-align: top !important;
 }
 
 /* Стили для режима Live Preview */
 .cm-table-widget .cm-table-widget-table {
 	border-radius: 15px !important;
-	max-width: 100% !important;
-	overflow-x: auto !important;
+	width: 100% !important;
+	table-layout: fixed !important;
 }
 
 .cm-table-widget .cm-table-widget-table th {
 	background-color: var(--color-base-10) !important;
+	width: auto !important;
+	word-wrap: break-word !important;
+	overflow-wrap: break-word !important;
+}
+
+.cm-table-widget .cm-table-widget-table td {
+	width: auto !important;
+	word-wrap: break-word !important;
+	overflow-wrap: break-word !important;
+	vertical-align: top !important;
 }
 
 .cm-table-widget .cm-table-widget-table tbody tr:hover {
 	background-color: var(--color-base-10) !important;
+}
+
+/* Дополнительные стили для очень широких таблиц */
+@media screen and (max-width: 768px) {
+	.markdown-preview-view table,
+	.cm-table-widget table,
+	.table-editor-table,
+	.markdown-reading-view table {
+		font-size: 0.9em !important;
+	}
+
+	.markdown-preview-view table th,
+	.markdown-preview-view table td,
+	.cm-table-widget th,
+	.cm-table-widget td {
+		padding: 8px 12px !important;
+	}
 }
 
 /* ===== ИЗОБРАЖЕНИЯ ===== */
@@ -457,150 +520,14 @@ ul > li:not(.task-list-item)::before{
 	color: var(--color-base-50)
 }
 
-/* Obsidian Callouts Стили */
-/* Основные стили для всех callouts */
 .callout {
-	border: none;
-	border-left: 4px solid var(--callout-color);
-	border-radius: 8px;
-	background: var(--callout-bg);
-	margin: 1em 0;
-	padding: 0;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 15px;
 }
-/* Заголовок callout */
+
 .callout-title {
-	display: flex;
-	align-items: center;
-	padding: 12px 16px;
-	margin: 0;
-	font-weight: 500;
-	font-size: 0.95em;
-	background: var(--callout-bg);
-	border-radius: 8px 8px 0 0;
+	border-radius: 15px 15px 0 0;
 }
-/* Иконка callout */
-.callout-icon {
-	margin-right: 8px;
-	flex-shrink: 0;
-	display: flex;
-	align-items: center;
-	width: 16px;
-}
-/* Содержимое callout */
+
 .callout-content {
-	padding: 0 16px 12px 45px;
-	background: var(--callout-bg);
-	border-radius: 0 0 8px 8px;
-}
-/* Когда callout свернут */
-.callout.is-collapsed .callout-content {
-	display: none;
-}
-/* Info callout (синий) */
-.callout[data-callout="info"] {
-	--callout-color: #3b82f6;
-	--callout-bg: #eff6ff;
-}
-.theme-dark .callout[data-callout="info"] {
-	--callout-bg: rgba(59, 130, 246, 0.1);
-}
-/* Todo callout (серый) */
-.callout[data-callout="todo"] {
-	--callout-color: #6b7280;
-	--callout-bg: #f9fafb;
-}
-.theme-dark .callout[data-callout="todo"] {
-	--callout-bg: rgba(107, 114, 128, 0.1);
-}
-/* Hint/Tip callout (бирюзовый) */
-.callout[data-callout="hint"],
-.callout[data-callout="tip"] {
-	--callout-color: #06b6d4;
-	--callout-bg: #ecfeff;
-}
-.theme-dark .callout[data-callout="hint"],
-.theme-dark .callout[data-callout="tip"] {
-	--callout-bg: rgba(6, 182, 212, 0.1);
-}
-/* Success callout (зеленый) */
-.callout[data-callout="success"],
-.callout[data-callout="check"],
-.callout[data-callout="done"] {
-	--callout-color: #10b981;
-	--callout-bg: #ecfdf5;
-}
-.theme-dark .callout[data-callout="success"],
-.theme-dark .callout[data-callout="check"],
-.theme-dark .callout[data-callout="done"] {
-	--callout-bg: rgba(16, 185, 129, 0.1);
-}
-/* Question callout (желтый) */
-.callout[data-callout="question"],
-.callout[data-callout="help"],
-.callout[data-callout="faq"] {
-	--callout-color: #f59e0b;
-	--callout-bg: #fffbeb;
-}
-.theme-dark .callout[data-callout="question"],
-.theme-dark .callout[data-callout="help"],
-.theme-dark .callout[data-callout="faq"] {
-	--callout-bg: rgba(245, 158, 11, 0.1);
-}
-/* Warning callout (оранжевый) */
-.callout[data-callout="warning"],
-.callout[data-callout="caution"],
-.callout[data-callout="attention"] {
-	--callout-color: #f97316;
-	--callout-bg: #fff7ed;
-}
-.theme-dark .callout[data-callout="warning"],
-.theme-dark .callout[data-callout="caution"],
-.theme-dark .callout[data-callout="attention"] {
-	--callout-bg: rgba(249, 115, 22, 0.1);
-}
-/* Error/Danger callout (красный) */
-.callout[data-callout="error"],
-.callout[data-callout="danger"] {
-	--callout-color: #ef4444;
-	--callout-bg: #fef2f2;
-}
-.theme-dark .callout[data-callout="error"],
-.theme-dark .callout[data-callout="danger"] {
-	--callout-bg: rgba(239, 68, 68, 0.1);
-}
-/* Стрелка для раскрывающихся callouts */
-.callout-fold {
-	margin-left: auto;
-	padding-left: 8px;
-	cursor: pointer;
-	opacity: 0.7;
-	transition: transform 0.2s ease, opacity 0.2s ease;
-}
-.callout-fold:hover {
-	opacity: 1;
-}
-.callout.is-collapsed .callout-fold {
-	transform: rotate(-90deg);
-}
-/* Плавные переходы */
-.callout-content {
-	transition: all 0.2s ease;
-}
-/* Дополнительные стили для лучшего вида */
-.callout p:last-child {
-	margin-bottom: 0;
-}
-.callout p:first-child {
-	margin-top: 0;
-}
-/* Стили для кода внутри callouts */
-.callout code {
-	background: rgba(0, 0, 0, 0.1);
-	padding: 2px 4px;
-	border-radius: 3px;
-	font-size: 0.9em;
-}
-.theme-dark .callout code {
-	background: rgba(255, 255, 255, 0.1);
+	border-radius: 0 0 15px 15px;
 }
